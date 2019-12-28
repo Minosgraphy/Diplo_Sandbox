@@ -31,7 +31,7 @@ struct NewsView : View {
                         .onAppear(perform: {
                             self.viewModel.getTopHeadlines()
                         })
-                        .navigationBarTitle(Text("Overview".localized()), displayMode: .large)
+                        .navigationBarTitle(Text("News".localized()), displayMode: .large)
                         .navigationBarItems(trailing:
                             Button(
                                 action: {
@@ -52,7 +52,7 @@ struct NewsView : View {
                         .onAppear(perform: {
                             self.viewModel.getTopHeadlines()
                         })
-                        .navigationBarTitle(Text("Overview".localized()), displayMode: .large)
+                        .navigationBarTitle(Text("Souces".localized()), displayMode: .large)
                         .navigationBarItems(trailing:
                             Button(
                                 action: {
@@ -73,7 +73,7 @@ struct NewsView : View {
                         .onAppear(perform: {
                             self.viewModel.getTopHeadlines()
                         })
-                        .navigationBarTitle(Text("Overview".localized()), displayMode: .large)
+                        .navigationBarTitle(Text("Search".localized()), displayMode: .large)
                         .navigationBarItems(trailing:
                             Button(
                                 action: {
