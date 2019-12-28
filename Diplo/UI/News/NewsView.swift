@@ -45,10 +45,48 @@ struct NewsView : View {
                             }
                             )
                     )
-                } else if viewIndex == 1 {
+                }
+                else if viewIndex == 1 {
                     SourcesListView()
-                } else if viewIndex == 2 {
+                        .animation(.spring())
+                        .onAppear(perform: {
+                            self.viewModel.getTopHeadlines()
+                        })
+                        .navigationBarTitle(Text("Overview".localized()), displayMode: .large)
+                        .navigationBarItems(trailing:
+                            Button(
+                                action: {
+                                    self.viewModel.clearTopHeadlines()
+                                    self.viewModel.getTopHeadlines()
+                            },
+                                label: {
+                                    Image(systemName: "arrow.2.circlepath")
+                                        .accentColor(Color("BlackColor"))
+                                        .imageScale(.large)
+                            }
+                            )
+                    )
+                }
+                else if viewIndex == 2 {
                     SearchForArticlesView()
+                        .animation(.spring())
+                        .onAppear(perform: {
+                            self.viewModel.getTopHeadlines()
+                        })
+                        .navigationBarTitle(Text("Overview".localized()), displayMode: .large)
+                        .navigationBarItems(trailing:
+                            Button(
+                                action: {
+                                    self.viewModel.clearTopHeadlines()
+                                    self.viewModel.getTopHeadlines()
+                            },
+                                label: {
+                                    Image(systemName: "arrow.2.circlepath")
+                                        .accentColor(Color("BlackColor"))
+                                        .imageScale(.large)
+                            }
+                            )
+                    )
                 }
             }
         }
