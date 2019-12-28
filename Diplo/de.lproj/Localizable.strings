@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  Diplo
+
+  Created by Björn Waltert on 27.12.19.
+  Copyright © 2019 State Love. All rights reserved.
+*/
+
+"Overview" = "Übersicht";
+"Top headlines" = "Schlagzeilen";
+"Sources" = "Quellen";
+"Search" = "Suchen";
+"Search articles..." = "Artikel suchen...";
+"About source:\n" = "Über Quelle:\n";
+
+// MARK: - Categories
+"Categories" = "Kategorien";
+"business" = "business";
+"entertainment" = "unterhaltung";
+"general" = "allgemein";
+"health" = "gesundheit";
+"science" = "wissenschaft";
+"sports" = "sport";
+"technology" = "technologie";
+
+// MARK: Errors
+"You made too many requests within a window of time and have been rate limited. Back off for a while." = "Es wurden zu viele Anfragen in zu kurzer Zeit gemacht. Dein Gratis-Limit der News-API ist aufgebraucht. Warten und zurücklehnen.";
+"Server error." = "Server Fehler";
+"Empty data." = "Keine Daten vorhanden";
+"Data has invalid format." = "Ungültiges Dateiformat";
+"Something goes wrong." = "Etwas ist schief gelaufen";
+"You've denied location authorization" = "Anfrage zum Ortungsdienst wurde abgelehnt";
