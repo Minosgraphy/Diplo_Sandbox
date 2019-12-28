@@ -23,7 +23,8 @@ struct NewsView : View {
                     ForEach(views, id: \.self) {
                         Text($0)
                     }
-                }.pickerStyle(SegmentedPickerStyle())
+                }
+                .pickerStyle(SegmentedPickerStyle())
                 
                 if viewIndex == 0 {
                     newsViewList
