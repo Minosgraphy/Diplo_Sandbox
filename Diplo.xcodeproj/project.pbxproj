@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D804806523B7B570001F2BB4 /* OrdersSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D804806423B7B570001F2BB4 /* OrdersSettings.swift */; };
+		D804806D23B7BD9A001F2BB4 /* SourceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D804806723B7BD9A001F2BB4 /* SourceRow.swift */; };
+		D804806E23B7BD9A001F2BB4 /* ArticlesFromSourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D804806923B7BD9A001F2BB4 /* ArticlesFromSourceViewModel.swift */; };
+		D804806F23B7BD9A001F2BB4 /* ArticlesFromSourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D804806A23B7BD9A001F2BB4 /* ArticlesFromSourceView.swift */; };
+		D804807023B7BD9A001F2BB4 /* SourcesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D804806B23B7BD9A001F2BB4 /* SourcesListView.swift */; };
+		D804807123B7BD9A001F2BB4 /* SourcesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D804806C23B7BD9A001F2BB4 /* SourcesListViewModel.swift */; };
 		D83A4E3523B5F652004654B1 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A4E3423B5F652004654B1 /* ActivityIndicator.swift */; };
 		D83A4E3C23B5F765004654B1 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A4E3B23B5F765004654B1 /* HomeView.swift */; };
 		D83A4E4323B5F7FF004654B1 /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A4E4223B5F7FF004654B1 /* OrdersView.swift */; };
@@ -54,6 +60,12 @@
 /* Begin PBXFileReference section */
 		48BED7444F6E8BE719B80C86 /* Pods_Diplo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Diplo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		526BD9A2777D82BFA4DC51F6 /* Pods-Diplo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Diplo.release.xcconfig"; path = "Target Support Files/Pods-Diplo/Pods-Diplo.release.xcconfig"; sourceTree = "<group>"; };
+		D804806423B7B570001F2BB4 /* OrdersSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersSettings.swift; sourceTree = "<group>"; };
+		D804806723B7BD9A001F2BB4 /* SourceRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourceRow.swift; sourceTree = "<group>"; };
+		D804806923B7BD9A001F2BB4 /* ArticlesFromSourceViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesFromSourceViewModel.swift; sourceTree = "<group>"; };
+		D804806A23B7BD9A001F2BB4 /* ArticlesFromSourceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticlesFromSourceView.swift; sourceTree = "<group>"; };
+		D804806B23B7BD9A001F2BB4 /* SourcesListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourcesListView.swift; sourceTree = "<group>"; };
+		D804806C23B7BD9A001F2BB4 /* SourcesListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SourcesListViewModel.swift; sourceTree = "<group>"; };
 		D83A4E3423B5F652004654B1 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		D83A4E3B23B5F765004654B1 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		D83A4E4223B5F7FF004654B1 /* OrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
@@ -113,6 +125,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D804806323B7B52C001F2BB4 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				D804806423B7B570001F2BB4 /* OrdersSettings.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		D804806623B7BD9A001F2BB4 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				D804806723B7BD9A001F2BB4 /* SourceRow.swift */,
+				D804806823B7BD9A001F2BB4 /* ArticlesFromSource */,
+				D804806B23B7BD9A001F2BB4 /* SourcesListView.swift */,
+				D804806C23B7BD9A001F2BB4 /* SourcesListViewModel.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		D804806823B7BD9A001F2BB4 /* ArticlesFromSource */ = {
+			isa = PBXGroup;
+			children = (
+				D804806923B7BD9A001F2BB4 /* ArticlesFromSourceViewModel.swift */,
+				D804806A23B7BD9A001F2BB4 /* ArticlesFromSourceView.swift */,
+			);
+			path = ArticlesFromSource;
+			sourceTree = "<group>";
+		};
 		D83A4E3323B5F63B004654B1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +176,7 @@
 				D83A4E3F23B5F7A5004654B1 /* Orders */,
 				D83A4E4023B5F7BA004654B1 /* Documents */,
 				D83A4E4123B5F7D8004654B1 /* Settings */,
+				D804806623B7BD9A001F2BB4 /* Sources */,
 				D8CA445923B65D4300BEE22F /* Search */,
 			);
 			path = UI;
@@ -314,6 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				D8CA445523B6592D00BEE22F /* News */,
+				D804806323B7B52C001F2BB4 /* Orders */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -481,9 +523,11 @@
 				D8EC45D623B64F66003FFD88 /* NewsView.swift in Sources */,
 				D8EC45D123B64F20003FFD88 /* ArticleRow.swift in Sources */,
 				D8B5C21D23B6444E008958AD /* ArticleSource.swift in Sources */,
+				D804807123B7BD9A001F2BB4 /* SourcesListViewModel.swift in Sources */,
 				D87F51E323B60516002CD837 /* APIProviderErrors.swift in Sources */,
 				D8B5C21423B643ED008958AD /* Container.swift in Sources */,
 				D8CA445D23B65D5700BEE22F /* SearchForArticlesViewModel.swift in Sources */,
+				D804806F23B7BD9A001F2BB4 /* ArticlesFromSourceView.swift in Sources */,
 				D8CA445823B65BBA00BEE22F /* NewsSettings.swift in Sources */,
 				D87F51E123B60516002CD837 /* EndpointProtocol.swift in Sources */,
 				D83A4E4523B5F810004654B1 /* DocumentsView.swift in Sources */,
@@ -495,10 +539,14 @@
 				D8B5C21323B643ED008958AD /* String+Extension.swift in Sources */,
 				D83A4E3C23B5F765004654B1 /* HomeView.swift in Sources */,
 				D8B5C21E23B6444E008958AD /* ArticlesResponse.swift in Sources */,
+				D804806D23B7BD9A001F2BB4 /* SourceRow.swift in Sources */,
+				D804807023B7BD9A001F2BB4 /* SourcesListView.swift in Sources */,
 				D83A4E4323B5F7FF004654B1 /* OrdersView.swift in Sources */,
 				D8EC45D523B64F66003FFD88 /* NewsViewModel.swift in Sources */,
 				D8EC45CC23B64EE1003FFD88 /* TopHeadlinesView.swift in Sources */,
 				D87F51B223B5FA9C002CD837 /* TabBar.swift in Sources */,
+				D804806E23B7BD9A001F2BB4 /* ArticlesFromSourceViewModel.swift in Sources */,
+				D804806523B7B570001F2BB4 /* OrdersSettings.swift in Sources */,
 				D8CA445C23B65D5700BEE22F /* SearchForArticlesView.swift in Sources */,
 				D87F51E423B60516002CD837 /* APIProvider.swift in Sources */,
 				D86A9A8E23A82C3C0047A744 /* SceneDelegate.swift in Sources */,

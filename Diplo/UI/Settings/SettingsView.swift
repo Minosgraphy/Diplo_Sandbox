@@ -42,7 +42,7 @@ struct SettingsView: View {
                 }
                 
                 Section {
-                    NavigationLink(destination: Text("")) {
+                    NavigationLink(destination: OrdersSettings()) {
                         HStack {
                             Image(systemName: "list.bullet")
                             Text("Orders")

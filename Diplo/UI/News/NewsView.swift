@@ -11,29 +11,46 @@ import SwiftUI
 struct NewsView : View {
     @ObservedObject var viewModel = NewsViewModel()
     
+    @State private var viewIndex: Int = 0
+    @State private var views: [String] = ["News", "Sources", "Search"]
+    
     private var categories: [String] = ["business", "entertainment", "general", "health", "science", "sports", "technology"]
     
     var body: some View {
         NavigationView {
-            newsViewList
-                .animation(.spring())
-                .onAppear(perform: {
-                    self.viewModel.getTopHeadlines()
-                })
-                .navigationBarTitle(Text("Overview".localized()), displayMode: .large)
-                .navigationBarItems(trailing:
-                    Button(
-                        action: {
-                            self.viewModel.clearTopHeadlines()
+            VStack {
+                Picker("Views", selection: self.$viewIndex) {
+                    ForEach(views, id: \.self) {
+                        Text($0)
+                    }
+                }.pickerStyle(SegmentedPickerStyle())
+                
+                if viewIndex == 0 {
+                    newsViewList
+                        .animation(.spring())
+                        .onAppear(perform: {
                             self.viewModel.getTopHeadlines()
-                        },
-                        label: {
-                            Image(systemName: "arrow.2.circlepath")
-                                .accentColor(Color("BlackColor"))
-                                .imageScale(.large)
-                        }
+                        })
+                        .navigationBarTitle(Text("Overview".localized()), displayMode: .large)
+                        .navigationBarItems(trailing:
+                            Button(
+                                action: {
+                                    self.viewModel.clearTopHeadlines()
+                                    self.viewModel.getTopHeadlines()
+                            },
+                                label: {
+                                    Image(systemName: "arrow.2.circlepath")
+                                        .accentColor(Color("BlackColor"))
+                                        .imageScale(.large)
+                            }
+                            )
                     )
-                )
+                } else if viewIndex == 1 {
+                    SourcesListView()
+                } else if viewIndex == 2 {
+                    SearchForArticlesView()
+                }
+            }
         }
     }
     
