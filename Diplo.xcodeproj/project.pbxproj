@@ -23,7 +23,6 @@
 		D86A9A9523A82C3C0047A744 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D86A9A9423A82C3C0047A744 /* Assets.xcassets */; };
 		D86A9A9823A82C3C0047A744 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D86A9A9723A82C3C0047A744 /* Preview Assets.xcassets */; };
 		D86A9A9B23A82C3C0047A744 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86A9A9923A82C3C0047A744 /* LaunchScreen.storyboard */; };
-		D87111A723B870CD00B2911A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D87111A623B870CD00B2911A /* SDWebImageSwiftUI */; };
 		D87F51B223B5FA9C002CD837 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87F51B123B5FA9C002CD837 /* TabBar.swift */; };
 		D87F51DF23B60516002CD837 /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87F51D423B60516002CD837 /* APIErrors.swift */; };
 		D87F51E123B60516002CD837 /* EndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D87F51D723B60516002CD837 /* EndpointProtocol.swift */; };
@@ -118,7 +117,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D87111A723B870CD00B2911A /* SDWebImageSwiftUI in Frameworks */,
 				D8B5C23823B64E6D008958AD /* KingfisherSwiftUI in Frameworks */,
 				EDC7F3F0C504DEBD0D80731A /* Pods_Diplo.framework in Frameworks */,
 			);
@@ -428,7 +426,6 @@
 			name = Diplo;
 			packageProductDependencies = (
 				D8B5C23723B64E6D008958AD /* KingfisherSwiftUI */,
-				D87111A623B870CD00B2911A /* SDWebImageSwiftUI */,
 			);
 			productName = Diplo;
 			productReference = D86A9A8823A82C3C0047A744 /* Diplo.app */;
@@ -461,7 +458,6 @@
 			mainGroup = D86A9A7F23A82C3C0047A744;
 			packageReferences = (
 				D8B5C23623B64E6D008958AD /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				D87111A523B870CD00B2911A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = D86A9A8923A82C3C0047A744 /* Products */;
 			projectDirPath = "";
@@ -766,14 +762,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D87111A523B870CD00B2911A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.10.0;
-			};
-		};
 		D8B5C23623B64E6D008958AD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
@@ -785,11 +773,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D87111A623B870CD00B2911A /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = D87111A523B870CD00B2911A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
-		};
 		D8B5C23723B64E6D008958AD /* KingfisherSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D8B5C23623B64E6D008958AD /* XCRemoteSwiftPackageReference "Kingfisher" */;
