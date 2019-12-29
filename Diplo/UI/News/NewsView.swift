@@ -20,20 +20,20 @@ struct NewsView : View {
                 .onAppear(perform: {
                     self.viewModel.getTopHeadlines()
                 })
-                .navigationBarTitle(Text("News".localized()), displayMode: .large)
+                .navigationBarTitle(Text("News"), displayMode: .large)
                 .navigationBarItems(trailing:
                     Button(
                         action: {
                             self.viewModel.clearTopHeadlines()
                             self.viewModel.getTopHeadlines()
-                    },
+                        },
                         label: {
                             Image(systemName: "arrow.2.circlepath")
                                 .accentColor(Color("BlackColor"))
                                 .imageScale(.large)
-                    }
+                        }
                     )
-            )
+                )
         }
     }
     
