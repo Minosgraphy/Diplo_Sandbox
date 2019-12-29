@@ -4,8 +4,9 @@
 
 ## Used
 
-### Framework: 
-Apple [SwiftUI](https://developer.apple.com/documentation/swiftui)and [Combine](https://developer.apple.com/documentation/combine)
-
 ### Design: 
 Application used: [Sketch](https://www.sketch.com)
+
+### Framework: 
+Apple [SwiftUI](https://developer.apple.com/documentation/swiftui), [Combine](https://developer.apple.com/documentation/combine) and [CoreData](https://developer.apple.com/documentation/coredata)
+Google [Firebase](https://firebase.google.com)
