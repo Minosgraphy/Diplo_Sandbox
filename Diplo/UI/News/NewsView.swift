@@ -11,6 +11,9 @@ import SwiftUI
 struct NewsView : View {
     @ObservedObject var viewModel = NewsViewModel()
     
+    @State var shouldPresent: Bool = false
+    @State var articleURL: URL?
+    
     private var categories: [String] = ["business", "entertainment", "general", "health", "science", "sports", "technology"]
     
     var body: some View {
