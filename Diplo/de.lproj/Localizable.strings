@@ -20,7 +20,6 @@
 "general" = "allgemein";
 "health" = "gesundheit";
 "science" = "wissenschaft";
-"sports" = "sport";
 "technology" = "technologie";
 
 // MARK: Errors
@@ -30,3 +29,5 @@
 "Data has invalid format." = "Ungültiges Dateiformat";
 "Something goes wrong." = "Etwas ist schief gelaufen";
 "You've denied location authorization" = "Anfrage zum Ortungsdienst wurde abgelehnt";
+
+"Good morning," = "Guten Morgen,";
