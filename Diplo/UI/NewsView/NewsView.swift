@@ -55,7 +55,7 @@ struct NewsView : View {
             List {
                 ForEach(categories, id: \.self) { category in
                     NavigationLink(
-                        destination: ArticlesFromCategoryView(category: category) .navigationBarTitle(Text(category.localized().capitalizeFirstLetter()), displayMode: .large)
+                        destination: ArticlesFromCategoryView(category: category) .navigationBarTitle(Text(category.localized().capitalizeFirstLetter()), displayMode: .automatic)
                     ) {
                         Text(category.localized().capitalizeFirstLetter())
                     }

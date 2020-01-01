@@ -32,7 +32,6 @@ struct ArticleRow : View {
         .cornerRadius(8)
         .padding([.leading, .trailing], 16)
         .padding([.top, .bottom], 8)
-        .shadow(color: .black, radius: 3, x: 0, y: 0)
     }
     
     private var articleInfo: some View {

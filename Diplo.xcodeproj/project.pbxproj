@@ -10,7 +10,7 @@
 		D838703823BC772C00B23A7E /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D838703723BC772C00B23A7E /* LottieView.swift */; };
 		D841B51A23BB525F0071812B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D841B51923BB525F0071812B /* ContentView.swift */; };
 		D841B51E23BB8DE10071812B /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D841B51D23BB8DE10071812B /* ViewRouter.swift */; };
-		D843435E23BC809A00D33552 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = D843435D23BC809A00D33552 /* Lottie */; };
+		D843435E23BC809A00D33552 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = D843435D23BC809A00D33552 /* SwiftPackageProductDependency */; };
 		D843436023BC899F00D33552 /* TabedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D843435F23BC899F00D33552 /* TabedView.swift */; };
 		D86A9A8C23A82C3C0047A744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86A9A8B23A82C3C0047A744 /* AppDelegate.swift */; };
 		D86A9A8E23A82C3C0047A744 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86A9A8D23A82C3C0047A744 /* SceneDelegate.swift */; };
@@ -19,7 +19,7 @@
 		D86A9A9B23A82C3C0047A744 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D86A9A9923A82C3C0047A744 /* LaunchScreen.storyboard */; };
 		D88EC10C23BC6E4F00E623F5 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88EC10B23BC6E4F00E623F5 /* Container.swift */; };
 		D88EC10E23BC6E7E00E623F5 /* ArticlesFromCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88EC10D23BC6E7E00E623F5 /* ArticlesFromCategoryView.swift */; };
-		D89AD9EB23BBA98A006540EB /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = D89AD9EA23BBA98A006540EB /* KingfisherSwiftUI */; };
+		D89AD9EB23BBA98A006540EB /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = D89AD9EA23BBA98A006540EB /* SwiftPackageProductDependency */; };
 		D89AD9F323BBAA25006540EB /* APIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89AD9F223BBAA25006540EB /* APIErrors.swift */; };
 		D89AD9F523BBAA44006540EB /* APIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89AD9F423BBAA44006540EB /* APIProvider.swift */; };
 		D89AD9F723BBAA63006540EB /* APIProviderErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D89AD9F623BBAA63006540EB /* APIProviderErrors.swift */; };
@@ -95,8 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D89AD9EB23BBA98A006540EB /* KingfisherSwiftUI in Frameworks */,
-				D843435E23BC809A00D33552 /* Lottie in Frameworks */,
+				D89AD9EB23BBA98A006540EB /* BuildFile in Frameworks */,
+				D843435E23BC809A00D33552 /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,8 +309,8 @@
 			);
 			name = Diplo;
 			packageProductDependencies = (
-				D89AD9EA23BBA98A006540EB /* KingfisherSwiftUI */,
-				D843435D23BC809A00D33552 /* Lottie */,
+				D89AD9EA23BBA98A006540EB /* SwiftPackageProductDependency */,
+				D843435D23BC809A00D33552 /* SwiftPackageProductDependency */,
 			);
 			productName = Diplo;
 			productReference = D86A9A8823A82C3C0047A744 /* Diplo.app */;
@@ -342,8 +342,8 @@
 			);
 			mainGroup = D86A9A7F23A82C3C0047A744;
 			packageReferences = (
-				D89AD9E923BBA98A006540EB /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				D843435C23BC809A00D33552 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				D89AD9E923BBA98A006540EB /* RemoteSwiftPackageReference */,
+				D843435C23BC809A00D33552 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = D86A9A8923A82C3C0047A744 /* Products */;
 			projectDirPath = "";
@@ -615,7 +615,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D843435C23BC809A00D33552 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		D843435C23BC809A00D33552 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
@@ -623,7 +623,7 @@
 				minimumVersion = 3.1.5;
 			};
 		};
-		D89AD9E923BBA98A006540EB /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		D89AD9E923BBA98A006540EB /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -634,14 +634,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D843435D23BC809A00D33552 /* Lottie */ = {
+		D843435D23BC809A00D33552 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D843435C23BC809A00D33552 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = D843435C23BC809A00D33552 /* RemoteSwiftPackageReference */;
 			productName = Lottie;
 		};
-		D89AD9EA23BBA98A006540EB /* KingfisherSwiftUI */ = {
+		D89AD9EA23BBA98A006540EB /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D89AD9E923BBA98A006540EB /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = D89AD9E923BBA98A006540EB /* RemoteSwiftPackageReference */;
 			productName = KingfisherSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */

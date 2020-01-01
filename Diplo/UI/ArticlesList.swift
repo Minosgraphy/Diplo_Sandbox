@@ -25,11 +25,11 @@ struct ArticlesList : View {
                             action: {
                                 self.articleURL = article.url
                                 self.shouldPresent = true
-                        },
+                            },
                             label: {
                                 ArticleRow(article: article)
                                     .animation(.spring())
-                        }
+                            }
                         )
                     }
                 }

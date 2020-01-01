@@ -61,10 +61,10 @@ struct TabedView: View {
                     VStack {
                         Spacer()
                         Rectangle()
-                            .fill(Color(.clear))
+                            .fill(Color("MainBackgroundColor"))
                             .frame(width: UIScreen.main.bounds.width,
-                                   height: UIScreen.main.bounds.height/7)
-                            .cornerRadius(25)
+                                   height: UIScreen.main.bounds.height / 7.5)
+                            .cornerRadius(15)
                     }
                 }
                 
