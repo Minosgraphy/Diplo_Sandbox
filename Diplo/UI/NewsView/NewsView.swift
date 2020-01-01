@@ -10,6 +10,12 @@ import SwiftUI
 
 struct NewsView : View {
     @ObservedObject var viewModel = NewsViewModel()
+    @ObservedObject var viewModelSearch = SearchForArticlesViewModel()
+    
+    @State private var searchFilter: String = ""
+    
+    @State private var showSearchSheet: Bool = false
+    @State private var showSourcesSheet: Bool = false
     
     private var categories: [String] = ["business", "entertainment", "general", "health", "science", "technology"]
     
@@ -29,6 +35,20 @@ struct NewsView : View {
                     })
             }
             .navigationBarTitle("News", displayMode: .large)
+            .navigationBarItems(trailing:
+                Button(action: {
+                        self.showSearchSheet.toggle()
+                    }) {
+                        Image(systemName: "magnifyingglass")
+                            .imageScale(.large)
+                            .foregroundColor(.secondary)
+                            .font(.headline)
+                    }
+                    .frame(width: 40, height: 40)
+            )
+            .sheet(isPresented: self.$showSearchSheet) {
+                    SearchForArticlesView()
+            }
         })
     }
     
@@ -36,19 +56,21 @@ struct NewsView : View {
         VStack {
             if viewModel.topHeadlines.isEmpty {
                 ActivityIndicator()
-                    .frame(width: UIScreen.main.bounds.width - 100,
+                    .frame(width: UIScreen.main.bounds.width - 75,
                            height: UIScreen.main.bounds.width / 4 * 2,
                            alignment: .center)
             }
             else {
                 VStack {
                     TopHeadlinesView(topHeadlines: viewModel.topHeadlines)
-                        .frame(width: UIScreen.main.bounds.width - 100,
+                        .frame(width: UIScreen.main.bounds.width - 75,
                                height: UIScreen.main.bounds.width / 4 * 2,
                                alignment: .center)
                         .clipped()
                         .cornerRadius(20)
                         .padding()
+                        .shadow(color: Color("MainBackgroundShadowTLeading"), radius: 13, x: -6, y: -6)
+                        .shadow(color: Color("MainBackgroundShadowBTrailing"), radius: 13, x: 6, y: 6)
                 }
             }
             

@@ -11,7 +11,7 @@ import SwiftUI
 struct ArticlesList : View {
     @State var shouldPresent: Bool = false
     @State var articleURL: URL?
-    @State var isActive: Bool = false
+    @State var showSourcesSheet: Bool = false
     
     var articles: [Article]
     
@@ -38,6 +38,19 @@ struct ArticlesList : View {
                 SafariView(url: self.articleURL!)
                     .edgesIgnoringSafeArea(.bottom)
             }
+        }
+        .navigationBarItems(trailing:
+            Button(action: {
+            self.showSourcesSheet.toggle()
+        }) {
+            Image(systemName: "list.bullet")
+                .imageScale(.large)
+                .foregroundColor(.secondary)
+                .font(.headline)
+        }
+        .frame(width: 40, height: 40))
+        .sheet(isPresented: self.$showSourcesSheet) {
+            SourcesListView()
         }
     }
 }

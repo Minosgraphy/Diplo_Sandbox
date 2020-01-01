@@ -29,3 +29,5 @@
 "Data has invalid format." = "Ungültiges Dateiformat";
 "Something goes wrong." = "Etwas ist schief gelaufen";
 "You've denied location authorization" = "Anfrage zum Ortungsdienst wurde abgelehnt";
+
+"Done" = "Fertig";

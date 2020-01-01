@@ -12,6 +12,6 @@ import Combine
 
 class ViewRouter: ObservableObject {
     
-    @Published var currentView = "home"
+    @Published var currentView = "news"
     
 }
