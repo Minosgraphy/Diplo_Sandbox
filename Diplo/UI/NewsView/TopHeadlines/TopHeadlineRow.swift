@@ -21,16 +21,16 @@ struct TopHeadlineRow : View {
             KFImage(URL(string: article.urlToImage ?? ""))
                 .renderingMode(.original)
                 .resizable()
-                .aspectRatio(4 / 3, contentMode: .fit)
-                .frame(width: UIScreen.main.bounds.width,
-                       height: UIScreen.main.bounds.width / 4 * 3,
+                .aspectRatio(4 / 3, contentMode: .fill)
+                .frame(width: UIScreen.main.bounds.width - 100,
+                       height: UIScreen.main.bounds.width / 4 * 2,
                        alignment: .center)
             
             Rectangle()
                 .foregroundColor(.black)
-                .opacity(0.6)
-                .frame(width: UIScreen.main.bounds.width,
-                       height: UIScreen.main.bounds.width / 4 * 3,
+                .opacity(0.5)
+                .frame(width: UIScreen.main.bounds.width - 100,
+                       height: UIScreen.main.bounds.width / 4 * 2,
                        alignment: .center)
             
             Button(
@@ -55,7 +55,7 @@ struct TopHeadlineRow : View {
                 .font(.subheadline)
                 .lineLimit(nil)
                 .padding([.leading, .trailing])
-                .frame(width: UIScreen.main.bounds.width,
+                .frame(width: UIScreen.main.bounds.width - 100,
                        alignment: .bottomLeading)
             
             Text(verbatim: article.title ?? "")
@@ -63,7 +63,7 @@ struct TopHeadlineRow : View {
                 .font(.headline)
                 .lineLimit(nil)
                 .padding([.leading, .bottom, .trailing])
-                .frame(width: UIScreen.main.bounds.width,
+                .frame(width: UIScreen.main.bounds.width - 100,
                        alignment: .bottomLeading)
         }
     }

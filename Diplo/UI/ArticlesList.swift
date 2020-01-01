@@ -11,29 +11,33 @@ import SwiftUI
 struct ArticlesList : View {
     @State var shouldPresent: Bool = false
     @State var articleURL: URL?
+    @State var isActive: Bool = false
     
     var articles: [Article]
     
     var body: some View {
-        ScrollView {
-            VStack(alignment: .center) {
-                ForEach(articles, id: \.self) { article in
-                    Button(
-                        action: {
-                            self.articleURL = article.url
-                            self.shouldPresent = true
-                    },
-                        label: {
-                            ArticleRow(article: article)
-                                .animation(.spring())
+        ZStack {
+            MainBackgroundColor()
+            ScrollView {
+                VStack(alignment: .center) {
+                    ForEach(articles, id: \.self) { article in
+                        Button(
+                            action: {
+                                self.articleURL = article.url
+                                self.shouldPresent = true
+                        },
+                            label: {
+                                ArticleRow(article: article)
+                                    .animation(.spring())
+                        }
+                        )
                     }
-                    )
                 }
             }
-        }
-        .sheet(isPresented: $shouldPresent) {
-            SafariView(url: self.articleURL!)
-                .edgesIgnoringSafeArea(.bottom)
+            .sheet(isPresented: $shouldPresent) {
+                SafariView(url: self.articleURL!)
+                    .edgesIgnoringSafeArea(.bottom)
+            }
         }
     }
 }

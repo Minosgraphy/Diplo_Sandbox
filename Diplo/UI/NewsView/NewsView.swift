@@ -13,66 +13,58 @@ struct NewsView : View {
     
     private var categories: [String] = ["business", "entertainment", "general", "health", "science", "technology"]
     
-    init(){
-        UITableView.appearance().backgroundColor = .clear
+    init() {
+        UITableView.appearance().backgroundColor = UIColor.clear
     }
     
     var body: some View {
         NavigationView(content: {
-            newsViewList
-                .animation(.spring())
-                .onAppear(perform: {
-                    self.viewModel.getTopHeadlines()
-                })
-                .navigationBarTitle("", displayMode: .inline)
-                .navigationBarHidden(true)
-//                .navigationBarItems(trailing:
-//                    Button(
-//                        action: {
-//                            self.viewModel.clearTopHeadlines()
-//                            self.viewModel.getTopHeadlines()
-//                    },
-//                        label: {
-//                            Image(systemName: "arrow.2.circlepath")
-//                                .accentColor(Color("BlackColor"))
-//                                .imageScale(.large)
-//                    }
-//                    )
-//            )
+            ZStack {
+                MainBackgroundColor()
+                
+                newsViewList
+                    .animation(.spring())
+                    .onAppear(perform: {
+                        self.viewModel.getTopHeadlines()
+                    })
+            }
+            .navigationBarTitle("News", displayMode: .large)
         })
     }
     
     private var newsViewList: some View {
-        List {
+        VStack {
             if viewModel.topHeadlines.isEmpty {
                 ActivityIndicator()
-                    .frame(width: UIScreen.main.bounds.width,
-                           height: UIScreen.main.bounds.width / 4 * 3,
+                    .frame(width: UIScreen.main.bounds.width - 100,
+                           height: UIScreen.main.bounds.width / 4 * 2,
                            alignment: .center)
-            } else {
-                TopHeadlinesView(topHeadlines: viewModel.topHeadlines)
-                    .frame(height: UIScreen.main.bounds.width / 4 * 3,
-                           alignment: .center)
-                    .clipped()
-                    .listRowInsets(EdgeInsets())
+            }
+            else {
+                VStack {
+                    TopHeadlinesView(topHeadlines: viewModel.topHeadlines)
+                        .frame(width: UIScreen.main.bounds.width - 100,
+                               height: UIScreen.main.bounds.width / 4 * 2,
+                               alignment: .center)
+                        .clipped()
+                        .cornerRadius(20)
+                        .padding()
+                }
             }
             
-            Section(header: Text(" ")) {
+            List {
                 ForEach(categories, id: \.self) { category in
                     NavigationLink(
-                        destination: ArticlesFromCategoryView(category: category)
-                            .navigationBarTitle(Text(category.localized().capitalizeFirstLetter()), displayMode: .large)
+                        destination: ArticlesFromCategoryView(category: category) .navigationBarTitle(Text(category.localized().capitalizeFirstLetter()), displayMode: .large)
                     ) {
                         Text(category.localized().capitalizeFirstLetter())
                     }
                 }
+                .listRowBackground(Color("MainBackgroundColor"))
             }
+            .listStyle(GroupedListStyle())
+            
+            Spacer()
         }
-        .background(Color("MainBackgroundColor"))
-        .listStyle(GroupedListStyle())
-        .navigationBarTitle("", displayMode: .inline)
-        .navigationBarHidden(true)
     }
 }
-
-

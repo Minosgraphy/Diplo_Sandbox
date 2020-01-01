@@ -10,6 +10,7 @@ import SwiftUI
 import UIKit
 
 struct ActivityIndicator: UIViewRepresentable {
+    
     func makeUIView(context: UIViewRepresentableContext<ActivityIndicator>) -> UIActivityIndicatorView {
         let activityIndicator = UIActivityIndicatorView()
         activityIndicator.tintColor = UIColor.black
