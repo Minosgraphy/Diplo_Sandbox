@@ -13,6 +13,14 @@
 "Search articles..." = "Artikel suchen...";
 "About source:\n" = "Über Quelle:\n";
 
+// MARK: - HomeView
+"Welcome" = "Willkommen";
+"user" = "benutzer";
+"apps" = "apps";
+"tools" = "werkzeuge";
+"settings" = "einstellungen";
+"developer" = "entwickler";
+
 // MARK: - Categories
 "Categories" = "Kategorien";
 "business" = "business";
@@ -22,6 +30,11 @@
 "science" = "wissenschaft";
 "technology" = "technologie";
 
+"close" = "schliessen";
+"cancel" = "abbrechen";
+"create" = "erstellen";
+"save" = "speichern";
+
 // MARK: Errors
 "You made too many requests within a window of time and have been rate limited. Back off for a while." = "Es wurden zu viele Anfragen in zu kurzer Zeit gemacht. Dein Gratis-Limit der News-API ist aufgebraucht. Warten und zurücklehnen.";
 "Server error." = "Server Fehler";
@@ -30,4 +43,6 @@
 "Something goes wrong." = "Etwas ist schief gelaufen";
 "You've denied location authorization" = "Anfrage zum Ortungsdienst wurde abgelehnt";
 
-"Done" = "Fertig";
+"done" = "fertig";
+"orders" = "bestellungen";
+"news" = "news";
