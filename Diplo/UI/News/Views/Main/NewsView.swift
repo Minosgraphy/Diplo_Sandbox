@@ -14,7 +14,6 @@ struct NewsView : View {
     
     @State private var searchFilter: String = ""
     @State private var showSearchSheet: Bool = false
-    @State private var showSourcesSheet: Bool = false
     
     private var categories: [String] = ["general", "business", "health", "technology", "entertainment", "science"]
     
@@ -34,22 +33,9 @@ struct NewsView : View {
                 Spacer()
             }
         }
-        .navigationBarTitle(Text("NEWS"), displayMode: .large)
+        .navigationBarTitle(Text("News"), displayMode: .large)
         .navigationBarItems(trailing:
             HStack(spacing: 25) {
-                // MARK: SOURCES
-                Button(action: {
-                    self.showSourcesSheet.toggle()
-                }) {
-                    Image(systemName: "list.bullet.indent")
-                        .imageScale(.large)
-                        .font(.headline)
-                }
-                .frame(width: 25, height: 25, alignment: .center)
-                .sheet(isPresented: self.$showSourcesSheet) {
-                    SourcesListView()
-                }
-                
                 // MARK: SEARCH
                 Button(action: {
                     self.showSearchSheet.toggle()

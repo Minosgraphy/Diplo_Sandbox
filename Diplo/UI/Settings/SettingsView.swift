@@ -45,8 +45,7 @@ struct SettingsView: View {
             .listRowBackground(Color("MainBackgroundColorListRow"))
             
         }
-        .navigationBarTitle(Text("settings".localized().capitalizeFirstLetter()), displayMode: .large)
-        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationBarTitle(Text("settings".localized().capitalizeFirstLetter()), displayMode: .inline)
     }
 }
 

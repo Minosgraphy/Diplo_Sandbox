@@ -46,3 +46,9 @@
 "done" = "fertig";
 "orders" = "bestellungen";
 "news" = "news";
+"edit" = "bearbeiten";
+
+// MARK: - Add Order
+"givenName" = "vorname";
+"familyName" = "name";
+"dateOfBirth" = "geburdatum";

@@ -8,25 +8,15 @@
 
 import SwiftUI
 
-struct HomeView: View {
+struct HomeView: View {    
     var body: some View {
         NavigationView {
             Form {
-                // MARK: - USER
-                Section {
-                    NavigationLink(destination: Text("")) {
-                        Text("user".localized().capitalizeFirstLetter())
-                    }
-                }
-                .listRowBackground(Color("MainBackgroundColorListRow"))
-                
                 // MARK: - OTHERS
                 Section {
                     // MARK: Apps
                     Group {
-                        NavigationLink(destination:
-                            AppsView()
-                        ) {
+                        NavigationLink(destination: AppsView()) {
                             ZStack {
                                 Rectangle()
                                     .fill(Color(#colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)))
@@ -38,12 +28,14 @@ struct HomeView: View {
                             .cornerRadius(7)
                             
                             Text("apps".localized().capitalizeFirstLetter())
+                                .font(.custom("Avenir Next", size: 17))
+                                .fontWeight(.regular)
                         }
                     }
                     
                     // MARK: Tools
                     Group {
-                        NavigationLink(destination: OrdersView()) {
+                        NavigationLink(destination: Text("")) {
                             ZStack {
                                 Rectangle()
                                     .fill(Color(#colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)))
@@ -55,6 +47,8 @@ struct HomeView: View {
                             .cornerRadius(7)
                             
                             Text("tools".localized().capitalizeFirstLetter())
+                                .font(.custom("Avenir Next", size: 17))
+                                .fontWeight(.regular)
                         }
                     }
                     
@@ -72,6 +66,8 @@ struct HomeView: View {
                             .cornerRadius(7)
                             
                             Text("news".localized().capitalizeFirstLetter())
+                                .font(.custom("Avenir Next", size: 17))
+                                .fontWeight(.regular)
                         }
                     }
                     
@@ -89,6 +85,8 @@ struct HomeView: View {
                             .cornerRadius(7)
                             
                             Text("orders".localized().capitalizeFirstLetter())
+                                .font(.custom("Avenir Next", size: 17))
+                                .fontWeight(.regular)
                         }
                     }
                 }
@@ -109,14 +107,16 @@ struct HomeView: View {
                             .cornerRadius(7)
                             
                             Text("settings".localized().capitalizeFirstLetter())
+                                .font(.custom("Avenir Next", size: 17))
+                                .fontWeight(.regular)
                         }
                     }
                 }
                 .listRowBackground(Color("MainBackgroundColorListRow"))
             }
             .navigationBarTitle(Text(" ".localized().capitalizeFirstLetter()), displayMode: .large)
+            .navigationViewStyle(StackNavigationViewStyle())
         }
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

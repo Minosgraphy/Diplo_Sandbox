@@ -11,16 +11,19 @@ import SwiftUI
 struct OrdersView: View {
     
     @Environment(\.presentationMode) var presentationMode
+    @Environment(\.managedObjectContext) var moc
+    
+    @FetchRequest(entity: Order.entity(), sortDescriptors: []) var orders: FetchedResults<Order>
     
     @State private var showAddOrderSheet: Bool = false
     
     var body: some View {
         Form {
-            Section {
-                Text("")
+            if !orders.isEmpty {
+                OrdersList()
             }
         }
-        .navigationBarTitle(Text("orders".localized().capitalizeFirstLetter()), displayMode: .large)
+        .navigationBarTitle(Text("orders".localized().capitalizeFirstLetter()), displayMode: .inline)
         .navigationBarItems(trailing:
             Button(action: {
                 self.showAddOrderSheet.toggle()
@@ -31,7 +34,7 @@ struct OrdersView: View {
                     .frame(width: 25, height: 25, alignment: .center)
             }
             .sheet(isPresented: self.$showAddOrderSheet) {
-                AddOrderView()
+                AddOrderView().environment(\.managedObjectContext, self.moc)
             }
         )
     }

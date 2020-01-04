@@ -17,14 +17,12 @@ struct AppsView: View {
                 }
             }
         }
-        .navigationBarTitle(Text("Apps"), displayMode: .large)
+        .navigationBarTitle(Text("Apps"), displayMode: .inline)
     }
 }
 
 struct AppsView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            AppsView()
-        }
+        AppsView()
     }
 }
