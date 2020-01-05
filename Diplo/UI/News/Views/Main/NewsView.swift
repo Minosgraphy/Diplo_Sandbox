@@ -17,26 +17,18 @@ struct NewsView : View {
     
     private var categories: [String] = ["general", "business", "health", "technology", "entertainment", "science"]
     
-    init() {
-        UITableView.appearance().backgroundColor = UIColor(named: "MainBackgroundColor")
-    }
-    
     var body: some View {
-        ZStack {
-            MainBackground()
-            
-            VStack {
-                newsViewList
-                    .onAppear(perform: {
-                        self.viewModel.getTopHeadlines()
-                    })
-                Spacer()
-            }
+        VStack {
+            newsViewList
+                .onAppear(perform: {
+                    self.viewModel.getTopHeadlines()
+                })
+            Spacer()
         }
+        .background(MainBackground())
         .navigationBarTitle(Text("News"), displayMode: .large)
         .navigationBarItems(trailing:
             HStack(spacing: 25) {
-                // MARK: SEARCH
                 Button(action: {
                     self.showSearchSheet.toggle()
                 }) {
@@ -89,6 +81,7 @@ struct NewsView : View {
                     }
                 }
                 .listRowBackground(Color("MainBackgroundColor"))
+                .listRowInsets(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
             }
             
             Spacer()

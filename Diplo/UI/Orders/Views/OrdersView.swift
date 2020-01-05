@@ -34,7 +34,8 @@ struct OrdersView: View {
                     .frame(width: 25, height: 25, alignment: .center)
             }
             .sheet(isPresented: self.$showAddOrderSheet) {
-                AddOrderView().environment(\.managedObjectContext, self.moc)
+                AddOrderView()
+                    .environment(\.managedObjectContext, self.moc)
             }
         )
     }

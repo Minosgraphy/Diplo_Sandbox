@@ -15,6 +15,11 @@ struct AppsView: View {
                 Group {
                     Text("")
                 }
+                .listRowBackground(Color("MainBackgroundColorListRow"))
+                .listRowInsets(EdgeInsets(top: 0,
+                                          leading: 10,
+                                          bottom: 0,
+                                          trailing: 10))
             }
         }
         .navigationBarTitle(Text("Apps"), displayMode: .inline)
@@ -23,6 +28,8 @@ struct AppsView: View {
 
 struct AppsView_Previews: PreviewProvider {
     static var previews: some View {
-        AppsView()
+        NavigationView {
+            AppsView()
+        }
     }
 }

@@ -14,12 +14,10 @@
 "About source:\n" = "Über Quelle:\n";
 
 // MARK: - HomeView
-"Welcome" = "Willkommen";
-"user" = "benutzer";
+"welcome" = "willkommen";
 "apps" = "apps";
 "tools" = "werkzeuge";
 "settings" = "einstellungen";
-"developer" = "entwickler";
 
 // MARK: - Categories
 "Categories" = "Kategorien";

@@ -8,114 +8,67 @@
 
 import SwiftUI
 
-struct HomeView: View {    
+struct HomeView: View {
+    
+    init() {
+        UITableView.appearance().backgroundColor = UIColor(named: "MainBackgroundColor")
+    }
+    
     var body: some View {
         NavigationView {
             Form {
                 // MARK: - OTHERS
                 Section {
-                    // MARK: Apps
                     Group {
+                        // MARK: Apps
                         NavigationLink(destination: AppsView()) {
-                            ZStack {
-                                Rectangle()
-                                    .fill(Color(#colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)))
-                                
-                                Image(systemName: "flame")
-                                    .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
-                            }
-                            .frame(width: 30, height: 30, alignment: .center)
-                            .cornerRadius(7)
-                            
-                            Text("apps".localized().capitalizeFirstLetter())
-                                .font(.custom("Avenir Next", size: 17))
-                                .fontWeight(.regular)
+                            DRow(iconColor: Color(#colorLiteral(red: 1, green: 0.231372549, blue: 0.1882352941, alpha: 1)),
+                                 iconImg: "flame",
+                                 title: "apps")
                         }
-                    }
-                    
-                    // MARK: Tools
-                    Group {
+                        
+                        // MARK: Tools
                         NavigationLink(destination: Text("")) {
-                            ZStack {
-                                Rectangle()
-                                    .fill(Color(#colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)))
-                                
-                                Image(systemName: "wrench.fill")
-                                    .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
-                            }
-                            .frame(width: 30, height: 30, alignment: .center)
-                            .cornerRadius(7)
-                            
-                            Text("tools".localized().capitalizeFirstLetter())
-                                .font(.custom("Avenir Next", size: 17))
-                                .fontWeight(.regular)
+                            DRow(iconColor: Color(#colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)),
+                                 iconImg: "wrench.fill",
+                                 title: "tools")
                         }
-                    }
-                    
-                    // MARK: News
-                    Group {
+                        
+                        // MARK: News
                         NavigationLink(destination: NewsView()) {
-                            ZStack {
-                                Rectangle()
-                                    .fill(Color(#colorLiteral(red: 0.1568627451, green: 0.8039215686, blue: 0.2549019608, alpha: 1)))
-                                
-                                Image(systemName: "book.fill")
-                                    .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
-                            }
-                            .frame(width: 30, height: 30, alignment: .center)
-                            .cornerRadius(7)
-                            
-                            Text("news".localized().capitalizeFirstLetter())
-                                .font(.custom("Avenir Next", size: 17))
-                                .fontWeight(.regular)
+                            DRow(iconColor: Color(#colorLiteral(red: 0.1568627451, green: 0.8039215686, blue: 0.2549019608, alpha: 1)),
+                                 iconImg: "book.fill",
+                                 title: "news")
                         }
-                    }
-                    
-                    // MARK: Orders
-                    Group {
+                        
+                        // MARK: Orders
                         NavigationLink(destination: OrdersView()) {
-                            ZStack {
-                                Rectangle()
-                                    .fill(Color(#colorLiteral(red: 0.6862745098, green: 0.3215686275, blue: 0.8705882353, alpha: 1)))
-                                
-                                Image(systemName: "list.bullet")
-                                    .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
-                            }
-                            .frame(width: 30, height: 30, alignment: .center)
-                            .cornerRadius(7)
-                            
-                            Text("orders".localized().capitalizeFirstLetter())
-                                .font(.custom("Avenir Next", size: 17))
-                                .fontWeight(.regular)
+                            DRow(iconColor: Color(#colorLiteral(red: 0.6862745098, green: 0.3215686275, blue: 0.8705882353, alpha: 1)),
+                                 iconImg: "list.bullet",
+                                 title: "orders")
                         }
                     }
+                    .listRowBackground(Color("MainBackgroundColorListRow"))
                 }
-                .listRowBackground(Color("MainBackgroundColorListRow"))
                 
                 // MARK: - SETTINGS
                 Section {
                     Group {
+                        // MARK: Settings
                         NavigationLink(destination: SettingsView()) {
-                            ZStack {
-                                Rectangle()
-                                    .fill(Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)))
-                                
-                                Image(systemName: "gear")
-                                .foregroundColor(Color(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)))
-                            }
-                            .frame(width: 30, height: 30, alignment: .center)
-                            .cornerRadius(7)
-                            
-                            Text("settings".localized().capitalizeFirstLetter())
-                                .font(.custom("Avenir Next", size: 17))
-                                .fontWeight(.regular)
+                            DRow(iconColor: Color(#colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)),
+                                 iconImg: "gear",
+                                 title: "settings")
                         }
                     }
+                    .listRowBackground(Color("MainBackgroundColorListRow"))
                 }
-                .listRowBackground(Color("MainBackgroundColorListRow"))
             }
-            .navigationBarTitle(Text(" ".localized().capitalizeFirstLetter()), displayMode: .large)
-            .navigationViewStyle(StackNavigationViewStyle())
+            .navigationBarTitle(
+                "welcome"
+                    .localized()
+                    .capitalizeFirstLetter()
+            )
         }
     }
 }

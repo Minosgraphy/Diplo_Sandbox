@@ -10,7 +10,6 @@ import CoreData
 import SwiftUI
 
 struct OrderDetailView: View {
-    
     @FetchRequest(entity: Order.entity(), sortDescriptors: []) var orders: FetchedResults<Order>
     
     let order: Order
@@ -21,7 +20,7 @@ struct OrderDetailView: View {
                 .font(.custom("Avenir Next", size: 17))
                 .fontWeight(.regular)
             
-            Text(order.givenName ?? "")
+            Text(order.familyName ?? "")
                 .font(.custom("Avenir Next", size: 17))
                 .fontWeight(.regular)
         }
@@ -34,8 +33,8 @@ struct OrderDetail_Previews: PreviewProvider {
     static var previews: some View {
         let newOrder = Order(context: self.moc)
         
-        newOrder.id = UUID()
         newOrder.givenName = "givenName"
+        newOrder.familyName = "familyName"
         
         return NavigationView {
             OrderDetailView(order: newOrder)

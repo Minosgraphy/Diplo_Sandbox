@@ -17,15 +17,6 @@ struct ContentView: View {
     }
 }
 
-// MARK: BACKGROUND
-struct MainBackground: View {
-    var body: some View {
-        Rectangle()
-            .fill(Color("MainBackgroundColor"))
-            .edgesIgnoringSafeArea(.vertical)
-    }
-}
-
 // MARK: PREVIEWS
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

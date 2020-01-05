@@ -11,7 +11,10 @@ import SwiftUI
 struct OrdersList: View {
     
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Order.entity(), sortDescriptors: []) var orders: FetchedResults<Order>
+    
+    @FetchRequest(entity: Order.entity(), sortDescriptors: [
+        NSSortDescriptor(keyPath: \Order.givenName, ascending: true)
+    ]) var orders: FetchedResults<Order>
     
     var body: some View {
         List {
@@ -20,8 +23,9 @@ struct OrdersList: View {
                     OrderCell(order: order)
                 }
                 .onDelete(perform: deleteEntry)
-                .listRowInsets(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
             }
+            .listRowBackground(Color("MainBackgroundColorListRow"))
+            .listRowInsets(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
         }
     }
     
